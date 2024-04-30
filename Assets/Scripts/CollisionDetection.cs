@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CollisionDetection : MonoBehaviour
 {
@@ -18,7 +19,6 @@ public class CollisionDetection : MonoBehaviour
                 healthComponent.TakeDamage(1);
             }
 
-            //Debug.Log(other.name);
             other.GetComponent<Animator>().SetTrigger("Hit");
             AudioSource ac = GetComponent<AudioSource>();
             ac.PlayOneShot(hitSound);

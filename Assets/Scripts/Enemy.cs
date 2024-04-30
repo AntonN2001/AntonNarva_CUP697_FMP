@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<Animator>().SetTrigger("Attack");
+            GetComponent<Animator>().SetTrigger("Attack");
         }
     }
 }

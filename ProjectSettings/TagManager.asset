@@ -12,6 +12,7 @@ TagManager:
   - BossTrigger
   - Boss Enemy
   - Projectile
+  - EndPickup
   layers:
   - Default
   - TransparentFX

@@ -211,9 +211,6 @@ public class FirstPersonController : MonoBehaviour
 
     }
 
-
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "AmmoBox")

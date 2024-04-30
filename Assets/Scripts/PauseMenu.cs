@@ -7,7 +7,9 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PausePanel;
     [SerializeField] private GameObject playerUI;
+    [SerializeField] private GameObject BossUI;
     private bool gameIsPaused;
+    BossTrigger bossTrigger;
 
     void Start()
     {
@@ -15,6 +17,7 @@ public class PauseMenu : MonoBehaviour
         playerUI.SetActive(true);
         gameIsPaused = false;
         PausePanel.SetActive(false);
+        
     }
 
     void Update()
@@ -33,6 +36,14 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         playerUI.SetActive(false);
+        BossUI.SetActive(false);
+
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+
+        foreach(AudioSource a in audios)
+        {
+            a.Pause();
+        }
     }
 
     public void Continue()
@@ -43,6 +54,14 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerUI.SetActive(true);
+        BossUI.SetActive(true);
+
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource a in audios)
+        {
+            a.Play();
+        }
     }
 
     public void GoToMainMenu()

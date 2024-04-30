@@ -6141,6 +6141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 8629291774768636918}
   playerUI: {fileID: 7750649183025297435}
+  BossUI: {fileID: 0}
 --- !u!1 &368981392936367405
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8770783158872010294}
   m_Layer: 0
-  m_Name: PowerUp 1
-  m_TagString: Soul
+  m_Name: EndPickup
+  m_TagString: EndPickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 4926296031026604225}
   - component: {fileID: 1441104945213289061}
   - component: {fileID: 6830289417496259825}
+  - component: {fileID: 2842476354499236496}
   - component: {fileID: 3943946494391078772}
-  - component: {fileID: 5817220779229046809}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -96,7 +96,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 087a6488e3f7ba04e856656e07d9664e, type: 2}
+  - {fileID: 2100000, guid: 67c6c26d756ddcd4baea5967176e7e5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,6 +139,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.05
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2842476354499236496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057787619354983362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc87f6286cf7a924695d59d2737a8683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &3943946494391078772
 AudioSource:
   m_ObjectHideFlags: 0
@@ -235,15 +247,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5817220779229046809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3057787619354983362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c71f49c2d6072e847a7881b4766fd09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -10,7 +10,7 @@ public class BossTrigger : MonoBehaviour
     [SerializeField] private GameObject gameManager;
     public AudioSource source;
     public AudioClip clip;
-    private bool audioPlayed;
+    public bool audioPlayed;
 
     void Start()
     {

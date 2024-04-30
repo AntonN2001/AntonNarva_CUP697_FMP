@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class BossEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject bossUI;
 
-    // Update is called once per frame
     void Update()
     {
         HealthSystem healthSystem = GetComponent<HealthSystem>();
 
         BossUI.healthValue = healthSystem.currentHealth;
+        if(healthSystem.currentHealth == 0)
+        {
+            bossUI.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 }
