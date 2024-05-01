@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndPickup : MonoBehaviour
+public class EndPickup1 : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("LevelA");
+            SceneManager.LoadScene("LevelB");
             Destroy(gameObject);
         }
     }
