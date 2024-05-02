@@ -906,7 +906,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6141,7 +6141,7 @@ GameObject:
   - component: {fileID: 5289008022041969751}
   - component: {fileID: 973768654116011631}
   - component: {fileID: 4057228965065111701}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6175,7 +6175,7 @@ GameObject:
   - component: {fileID: 7110637092937081666}
   - component: {fileID: 7440472324005681008}
   - component: {fileID: 1817825081099479705}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7801,7 +7801,7 @@ GameObject:
   - component: {fileID: 2264850998074513083}
   - component: {fileID: 7553268805087234168}
   - component: {fileID: 4297762544532382282}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8022,7 +8022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8661460639473571553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ProjectileSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9181,7 +9181,9 @@ GameObject:
   - component: {fileID: 3987827959729509818}
   - component: {fileID: 4128644641874272356}
   - component: {fileID: 3100818727293529826}
-  m_Layer: 0
+  - component: {fileID: 4128644641874272358}
+  - component: {fileID: 4128644641874272357}
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -10569,7 +10571,7 @@ GameObject:
   - component: {fileID: 4278840907328552910}
   - component: {fileID: 3180511852559216457}
   - component: {fileID: 3861245416495544004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10726,7 +10728,7 @@ GameObject:
   - component: {fileID: 170032346300169154}
   - component: {fileID: 5568578266519234085}
   - component: {fileID: 2846050274000671531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crossbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11355,7 +11357,7 @@ GameObject:
   - component: {fileID: 1836449541133324280}
   - component: {fileID: 8268637355654699836}
   - component: {fileID: 1177406231025675599}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arrow_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12221,6 +12223,83 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &4128644641874272357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2638900107044193484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 17e89f7d2b639124e8be3e97aaeda2d3, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &4128644641874272358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2638900107044193484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 3987827959729509818}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &4129955760691278911
 GameObject:
   m_ObjectHideFlags: 0
@@ -16074,7 +16153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3930540292813417561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpearSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

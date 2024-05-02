@@ -10,17 +10,21 @@ public class Enemy1 : MonoBehaviour
     public Transform player;
     public Animator anim;
     private bool enemyDied;
-    [SerializeField] private float timer = 5;
-    private float bulletTime;
-    public GameObject enemyBullet;
+
+    [SerializeField] private float projectileTimer = 5;
+    private float projectileTime;
+    public GameObject enemyProjectile;
     public Transform spawnPoint;
-    public float enemySpeed;
+    public float enemyProjectileSpeed;
+
+    public AudioClip tigerRoar;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; //find player
         enemy = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        GetComponent<AudioSource>();
         //enemyDied = false;
     }
 
@@ -37,6 +41,8 @@ public class Enemy1 : MonoBehaviour
         else if (enemyDied == true)
         {
             enemy.isStopped = true;
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(tigerRoar);
         }
     }
 
@@ -44,21 +50,23 @@ public class Enemy1 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-
             other.GetComponent<Animator>().SetTrigger("Attack");
+            AudioSource ac = GetComponent<AudioSource>();
+            ac.PlayOneShot(tigerRoar);
         }
     }
 
     void ShootAtPlayer()
     {
-        bulletTime -= Time.deltaTime;
-        if (bulletTime > 0) return;
+        
+        projectileTime -= Time.deltaTime;
+        if (projectileTime > 0) return;
 
-        bulletTime = timer;
+        projectileTime = projectileTimer;
 
-        GameObject bulletObj = Instantiate(enemyBullet, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
+        GameObject bulletObj = Instantiate(enemyProjectile, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
         Rigidbody bulletRig = bulletObj.GetComponent<Rigidbody>();
-        bulletRig.AddForce(bulletRig.transform.forward * enemySpeed);
+        bulletRig.AddForce(bulletRig.transform.forward * enemyProjectileSpeed);
         Destroy(bulletObj, 5f);
     }
 }

@@ -9,7 +9,7 @@ public class EndPickup3 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Ending");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Destroy(gameObject);

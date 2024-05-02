@@ -12,7 +12,7 @@ public class FirstPersonController : MonoBehaviour
     public Camera thirdPersonCamera;
     public float walkingSpeed = 4f;
     public float sprintingSpeed = 12f;
-    public float jumpingPower = 7f;
+    public float jumpingPower = 2f;
     public float gravity = 10f;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;

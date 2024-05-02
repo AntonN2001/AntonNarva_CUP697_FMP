@@ -21,7 +21,7 @@ public class PowerUpSystem : MonoBehaviour
     {
         powerupScreen.SetActive(true);
         powerupShield.SetActive(true);
-        fps.walkingSpeed = 30f;
+        fps.walkingSpeed = 12f;
         AudioSource ac = GetComponent<AudioSource>();
         ac.PlayOneShot(powerupCollected);
         StartCoroutine(PowerUpCooldown());
