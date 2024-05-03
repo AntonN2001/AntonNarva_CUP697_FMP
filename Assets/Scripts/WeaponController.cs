@@ -76,7 +76,8 @@ public class WeaponController : MonoBehaviour
                     }
                     else if (currentArrows == 0)
                     {
-                        CrossbowArrow.SetActive(false);
+                        currentArrows = 10;
+                        //CrossbowArrow.SetActive(false);
                         Debug.Log("Out of arrows");
                     }
                 }
@@ -93,11 +94,14 @@ public class WeaponController : MonoBehaviour
                 }
                 else if (currentSpears == 0)
                 {
+                    currentSpears = 5;
                     //Spear.SetActive(false);
                     Debug.Log("Out of spears");
                 }
             }
         }
+        SpearUI.spears = currentSpears;
+        AmmoUI.ammo = currentArrows;
     }
 
 
@@ -115,7 +119,7 @@ public class WeaponController : MonoBehaviour
     public void CrossbowAttack()
     {
         currentArrows--;
-        AmmoUI.ammo--;
+        //AmmoUI.ammo--;
         isAttacking = true;
         canAttack = false;
         var arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.transform.rotation * Quaternion.Euler(-90,0,90));
@@ -130,7 +134,7 @@ public class WeaponController : MonoBehaviour
     {
         Spear.SetActive(true);
         currentSpears--;
-        SpearUI.spears--;
+        //SpearUI.spears--;
         isAttacking = true;
         canAttack = false;
         var spear = Instantiate(spearPrefab, spearSpawnPoint.position, spearSpawnPoint.transform.rotation * Quaternion.Euler(0, 0, 90));

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject tutorialText3;
     [SerializeField] private GameObject tutorialText4;
     [SerializeField] private GameObject spawnEnemy;
+    //[SerializeField] private GameObject playerUI;
     private int tutorialPhase;
 
     void Start()
@@ -19,6 +21,7 @@ public class Tutorial : MonoBehaviour
         tutorialText3.SetActive(false);
         tutorialText4.SetActive(false);
         tutorialPhase = 0;
+        //Destroy(playerUI);
     }
 
     void Update()

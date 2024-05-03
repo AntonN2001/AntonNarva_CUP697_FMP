@@ -16974,7 +16974,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -41941,7 +41941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78dcaaa34ea4d7f4ab8f7a94c13d83fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 30
   currentHealth: 0
   soulPrefab: {fileID: 1153847997083147283, guid: 8b20eac61120ea748acc43fa97969702, type: 3}
   anim: {fileID: 0}
